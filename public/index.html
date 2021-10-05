@@ -44,6 +44,19 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    
+    <div class="container">
+    <main class="content">
+      <section class="new-tweet">
+        <form method="POST" action="/tweets/">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="submit">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+    </main>
+    </div>
   </body>
 </html>
