@@ -8,9 +8,12 @@
   margin-top: 600px;
   border-radius: var(--size-radius);
   border: 3px solid var(--color-shadow, currentColor);
-  box-shadow: 0.75rem 0.75rem 0 var(--color-shadow, currentColor);
-  --size-bezel: left: 0.5em; right: 0.5em;
+  
 
+}
+.new-tweet:hover{
+  box-shadow: 0.75rem 0.75rem 0 var(--color-shadow, #4056A1);
+  --size-bezel: left: 0.5em; right: 0.5em;
 }
 
 textarea {
@@ -50,6 +53,11 @@ button {
   font-family: "bungee";
   font-weight: 400;
   color: #f97f58;
+}
+
+button:hover {
+  color: #4056A1;
+  background: #f97f58;
 }
 
 output {
