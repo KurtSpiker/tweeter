@@ -58,3 +58,11 @@ output {
   font-weight: 700;
   color: #f97f58;
 }
+
+.counter {
+  font-family: "Bungee";
+}
+
+.limitExceeded {
+  color: red;
+}
