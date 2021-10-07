@@ -20,6 +20,8 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -47,11 +49,11 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <div class="container">
+    <div class="main-container">
     <main class="content">
       <section class="new-tweet">
         <form method="POST" action="/tweets/">
-          <text for="tweet-text">What are you humming about?</label>
+          <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" class="tweet-text"></textarea>
           <div class="submit">
             <button type="submit">Tweet</button>
@@ -59,58 +61,7 @@
           </div>
         </form>
       </section>
-      <article class="tweets">
-        <header class="tweet-header">
-          <span class="tweeter-profile">
-            <img src="/images/profile-hex.png"> 
-          <h2> Kurt Spiker</h2>
-        </span>
-        <span class="userhandle">
-          <h2>@Kurt_Spiker</h2>
-        </span>
-        </header>
-        <form></form>
-        <div class="tweet-post-content">
-          <h2>This is a great test tweet!</h2>
-        </div>
-      </form>
-        <footer>
-          <div>
-            <p> 8 days ago</p>
-          </div>
-          <div> 
-          <i class="fas fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
-        </div>
-        </footer>
-      </article>
-      <article class="tweets">
-        <header class="tweet-header">
-          <span class="tweeter-profile">
-            <img src="/images/profile-hex.png"> 
-          <h2> Kurt Spiker</h2>
-        </span>
-        <span class="userhandle">
-          <h2>@Kurt_Spiker</h2>
-        </span>
-        </header>
-        <form></form>
-        <div class="tweet-post-content">
-          <h2>Test tweet for scrolling</h2>
-        </div>
-      </form>
-        <footer>
-          <div>
-            <p> 8 days ago</p>
-          </div>
-          <div> 
-          <i class="fas fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
-        </div>
-        </footer>
-      </article>
+      <article id="tweets-container" ></article>
     </main>
     </main>
     </div>

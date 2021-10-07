@@ -1,6 +1,4 @@
-.tweets {
-  width: 100vw;
-  max-width: 90%;
+.tweets{
   background-color: white;
   padding: 35px;
   margin-bottom: 50px;
@@ -15,8 +13,8 @@
 .tweets:hover{
   box-shadow: 0.75rem 0.75rem 0 var(--color-shadow, #4056A1);
   --size-bezel: left: 0.5em; right: 0.5em;
+  transition: width 5s;
 }
-
 
 .tweet-header {
   width: 100%;
@@ -98,4 +96,10 @@
 
 i {
   color:#4056A1;
+}
+
+#tweets-container {
+  
+  max-width: 90%;
+  width: 100vw;
 }
