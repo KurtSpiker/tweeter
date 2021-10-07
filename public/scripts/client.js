@@ -47,7 +47,23 @@ $(document).ready(function() {
       }
     })
   }
+
+  $(".nav-right").on("click", () => {
+    $(".new-tweet").slideToggle();
+  });
+
+  window.addEventListener('scroll', (event) => {
+    if (window.scrollY > 0) {
+      $(".snap-top").css("display", "flex");
+    } else {
+      $(".snap-top").css("display", "none");
+    }
+  });
   
+  $(".snap-top").on("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
         $("#tweets-container").prepend(createTweetElement(tweet))
