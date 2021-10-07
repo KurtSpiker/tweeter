@@ -72,3 +72,11 @@ output {
 .limitExceeded {
   color: red;
 }
+
+.error {
+  border: 3px red solid;
+  color: red;
+  font-size: 30px;
+  visibility: collapse;
+  opacity: 0;
+}

@@ -1,4 +1,5 @@
 $(document).ready(function() {  
+  $("#error").slideUp();
   const createTweetElement = (tweetObj) => {
     const name = tweetObj.user.name;
     const avatar = tweetObj.user.avatars;
@@ -55,7 +56,20 @@ $(document).ready(function() {
 
   $("#new-tweet-form").submit(function(event) {
     event.preventDefault();
-    $.post("/tweets", $(this).serialize(), loadTweets) 
+    const input = $(this).find("#tweet-text").val();
+    if (input === '' || input === null) {
+      $(".error").css("visibility", "visible");
+      $(".error").css("opacity", "1");
+      $(".error").text("Error: You are not allowed to post an empty Tweet.");
+    } else if (input.length > 140) {
+      $(".error").css("visibility", "visible");
+      $(".error").css("opacity", "1");
+      $(".error").text("Error: Please stay within 140 characters.");
+    } else {
+      $(".error").css("opacity", "0");
+      $(".error").css("visibility", "collapse");
+      $.post("/tweets", $(this).serialize(), loadTweets)
+    }
   });
   loadTweets();
 });
