@@ -1,34 +1,30 @@
 .new-tweet {
-  width: 100vw;
-  max-width: 90%;
-  padding: 25px;
-  margin-bottom: 50px;
-  margin-top: 600px;
+  padding: 15px;
+  margin-top: 10px;
   border-radius: var(--size-radius);
+  margin-top: 10px;
   display: none;
-  
-  
-
+  width: 90%;
 }
 
 textarea {
   box-sizing: border-box;
-    display: block;
-    width: 100%;
-    padding: 0.75em;
-    margin-top: 0.5em;
-    color: currentColor;
-    background: transparent;
-    border-radius: var(--size-radius);
-    font-size: 21px;
-    font-family: "Source Sans Pro", "sans-serif";
-    font-weight: 700;
-    resize: none;
-    border-bottom: 4px solid var(--color-shadow, #4056A1);
-    outline: none;
-    border-top: none;
-    border-right: none;
-    border-left: none;
+  display: block;
+  width: 100%;
+  padding: 0.75em;
+  margin-top: 0.5em;
+  color: currentColor;
+  background: transparent;
+  border-radius: var(--size-radius);
+  font-size: 21px;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-weight: 700;
+  resize: none;
+  border-bottom: 4px solid var(--color-shadow, #4056A1);
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
 label {
@@ -80,4 +76,10 @@ output {
   font-size: 30px;
   visibility: collapse;
   opacity: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .new-tweet {
+    
+  }
 }

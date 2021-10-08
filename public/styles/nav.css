@@ -1,13 +1,13 @@
-nav {
+.nav-bar {
   height: 120px;
+  width: 100vw; padding: 1.5em;
   background-color: #4056A1;
   color: #FFFFFF;
-  width: 100%; padding: 1.5em;
   display: flex;
   justify-content: space-between;
   position: fixed;
+  z-index: 99;
   top: 0;
-  z-index: 1;
 }
 
 .nav-box {
@@ -30,8 +30,32 @@ nav {
   animation-timing-function: ease;
 }
 
+.nav-hidden-name {
+  visibility: collapse;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
 @keyframes bounce {
   0% {transform: translateY(0);}
   50% {transform: translateY(10px);}
   100% {transform: translateY(0);}
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav-bar {
+    background-color: #f97f58;
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");  
+  }
+  .nav-hidden-name img {
+    visibility: visible;
+    align-items: center;
+    max-width: 30%;
+    height: auto;
+    text-align: center;
+  }
+  .nav-hidden-name {
+    visibility: visible;
+  }
 }

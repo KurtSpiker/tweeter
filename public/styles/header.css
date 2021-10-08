@@ -1,20 +1,27 @@
-header.main-header {
+.main-header {
   justify-content: center;
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: 400px;
   width: 100%;
-  flex: 1;
-  position: absolute;
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");     
-  background-color: #f78126;
+  background-color: #f97f58;
   text-align: center;
   color: white;
-  flex-direction: column;
   padding-top:40px;
   margin-top: 120px;
 }
-
 .name {
   font-weight: 300;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-header {
+    height: 0px;
+    visibility: hidden;
+  }
+  .main-header img {
+   visibility: hidden;
+  }
 }

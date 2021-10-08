@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -31,16 +32,19 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav >
+    <nav class="nav-bar">
       <span style="font-family: 'Bungee', cursive;">tweeter</span>
+      <div class="nav-hidden-name"><img src="/images/profile-hex.png"><b>Kurt Spiker</b></div>
       <div class="nav-right">
         <div><b>Write</b> a new tweet</div>
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
+    
+    <!-- Avatar and name-->
     <header class="main-header">
       <div>
-          <img src="/images/profile-hex.png"> 
+          <img class="profile" src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
@@ -49,7 +53,6 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <div class="main-container">
     <main class="content">
       <section class="new-tweet">
         <p class="error" >312</p>
@@ -65,7 +68,5 @@
       <article id="tweets-container" ></article>
       <div class="snap-top"><i class="fas fa-angle-double-up"></i></div>
     </main>
-    </main>
-    </div>
   </body>
 </html>
