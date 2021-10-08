@@ -1,4 +1,6 @@
 $(document).ready(function() {  
+  
+  //The html form for creating new tweets
   const createTweetElement = (tweetObj) => {
     const name = tweetObj.user.name;
     const avatar = tweetObj.user.avatars;
@@ -36,7 +38,7 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  
+  //Loads the tweets from the JSON
   const loadTweets = function() {
     $.ajax({
       url: '/tweets',
@@ -47,10 +49,12 @@ $(document).ready(function() {
     })
   }
 
+  //Animation for the new tweet box to slide down on click
   $(".nav-right").on("click", () => {
     $(".new-tweet").slideToggle();
   });
 
+  //Scrolling listenr for snapping to the top of the page
   window.addEventListener('scroll', (event) => {
     if (window.scrollY > 0) {
       $(".snap-top").css("display", "flex");
@@ -59,10 +63,12 @@ $(document).ready(function() {
     }
   });
   
+  // Snap to the top of page through mouse click
   $(".snap-top").on("click", () => {
     document.documentElement.scrollTop = 0;
   });
 
+  //Looping through all existing arrays to populate the page
   const renderTweets = function(tweets) {
     $("#tweets-container").empty();
     for (const tweet of tweets) {
@@ -70,6 +76,7 @@ $(document).ready(function() {
     }
   }
 
+  //Submit handler and redirected POST request
   $("#new-tweet-form").submit(function(event) {
     event.preventDefault();
     const input = $(this).find("#tweet-text").val();
@@ -85,6 +92,7 @@ $(document).ready(function() {
       $(".error").css("opacity", "0");
       $(".error").css("visibility", "collapse");
       $.post("/tweets", $(this).serialize(), loadTweets)
+      document.getElementById("tweet-text").value = '';
     }
   });
   loadTweets();
