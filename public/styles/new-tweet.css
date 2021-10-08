@@ -1,6 +1,5 @@
 .new-tweet {
   padding: 15px;
-  margin-top: 10px;
   border-radius: var(--size-radius);
   margin-top: 10px;
   display: none;
@@ -71,13 +70,12 @@ output {
 }
 
 .error {
-  border: 3px red solid;
   color: red;
   font-size: 30px;
   visibility: collapse;
   opacity: 0;
+  text-align: center;
 }
-
 @media only screen and (max-width: 1024px) {
   .new-tweet {
     

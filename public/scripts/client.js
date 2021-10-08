@@ -1,5 +1,4 @@
 $(document).ready(function() {  
-  $("#error").slideUp();
   const createTweetElement = (tweetObj) => {
     const name = tweetObj.user.name;
     const avatar = tweetObj.user.avatars;
@@ -65,8 +64,9 @@ $(document).ready(function() {
   });
 
   const renderTweets = function(tweets) {
+    $("#tweets-container").empty();
     for (const tweet of tweets) {
-        $("#tweets-container").prepend(createTweetElement(tweet))
+      $("#tweets-container").prepend(createTweetElement(tweet))
     }
   }
 
@@ -80,7 +80,7 @@ $(document).ready(function() {
     } else if (input.length > 140) {
       $(".error").css("visibility", "visible");
       $(".error").css("opacity", "1");
-      $(".error").text("Error: Please stay within 140 characters.");
+      $(".error").text(`Error: You are ${input.length - 140} characters over the tweet limit.`);
     } else {
       $(".error").css("opacity", "0");
       $(".error").css("visibility", "collapse");
